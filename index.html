@@ -4,20 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AutoSerwis Pro | Profesjonalna Mechanika Pojazdowa</title>
-    <!-- Favicon (Ikonka na karcie przeglądarki) -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23f97316'/><path d='M65 30a15 15 0 0 0-18 2.5l-8.5 8.5a4 4 0 0 0 0 5.6l2.8 2.8-15.5 15.5a5 5 0 0 0 0 7l4.2 4.2a5 5 0 0 0 7 0l15.5-15.5 2.8 2.8a4 4 0 0 0 5.6 0l8.5-8.5A15 15 0 0 0 70 35l-7 7-5-5 7-7z' fill='%23ffffff'/></svg>">
+    <!-- Favicon (Wbudowana ikona PNG - działa natychmiast we wszystkich przeglądarkach) -->
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALnSURBVHhe7Zq9axRBGMbzT2iqwyqdXUobsbOzFCzsUtpEOYsrUsRCxMIUQhBRSKFFQJsIFikUtJADixSiWBxCwBSBQ+Hc29ndCc+cF+7emf24/biZYd8HHpLsvjPJ89vZmdnbrPzbXL063ryw1VavTL65KNtqBsAAGAADYAD0YJvMABgAA2AAbgLorUnx9IaM3j+S8dE7Gf/8JONvh+pn8eymDLcu621K2EkA4vUdKUUg8xQdPtHaLmq3APTW1NVeRMmgL8OHV/S+CtoZABjSyekvmq+YRKBuF9pnETsDYNErTwV4425H6zfPTgAQ+/donnPFX9/I6G1PXWHUxZ9f0pJz4RztO8/WAWDoGye80VDN9rRetdm5LpOTH7SFEs7R+ixbByBe3KYZlNLu6XD69cG6ERyWSdomy9YBYCmjir+8+n9+Vaufa3uwTZuquYTWZdk6AGxuqLAPCAy11OHja7SpTP6caHVZtg4AfzAV7uPw+S2tVnO3Q5sqLbJLtA9g0Kd/v5r5MTJo7awxQrAB0jQaarVZtg4g+rhLI0wkAjXR0fpZqy0zEZ4ZaF2WrQMwhZgqxjY3bTh3O8alEEC12gxbB2AcxrMaDWX0YVdG+3fl+P6lSbtuR60UJom9De13ZNk6ADg5PqI55pT8/q4elDAasG8wXXkI8wntO8/WAWDjUoswZ5R4KrQKoLbwuPcPtrX+i9gagNrCi6B0eNgKgNzwwV96xKiqH4bASweQFx4Tovo8cG9DLWlY1+fOD/rqsRePxrTvMl4qgKLhaTu46pVO89IAVAnfpJcCwNXwcOMAXA4PNwrA9fBwYwB8CA83AsCX8HDtAHwKD9cKwLfwcG0AfAwP1wLA1/BwZQB4bZUll8PDlQCkvZ2ZyvXwcCUAeGJLkw/h4UoA8ALDJF/Cw5UAwHiJ4Wt4uDIAGB9OYCXAhFjmnxRsuhYAPpsBMAAGwAAYAD3YJjMABsAAGAADoAfb5NYDOAMUADVNa8+GZwAAAABJRU5ErkJggg==">
+    <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALnSURBVHhe7Zq9axRBGMbzT2iqwyqdXUobsbOzFCzsUtpEOYsrUsRCxMIUQhBRSKFFQJsIFikUtJADixSiWBxCwBSBQ+Hc29ndCc+cF+7emf24/biZYd8HHpLsvjPJ89vZmdnbrPzbXL063ryw1VavTL65KNtqBsAAGAADYAD0YJvMABgAA2AAbgLorUnx9IaM3j+S8dE7Gf/8JONvh+pn8eymDLcu621K2EkA4vUdKUUg8xQdPtHaLmq3APTW1NVeRMmgL8OHV/S+CtoZABjSyekvmq+YRKBuF9pnETsDYNErTwV4425H6zfPTgAQ+/donnPFX9/I6G1PXWHUxZ9f0pJz4RztO8/WAWDoGye80VDN9rRetdm5LpOTH7SFEs7R+ixbByBe3KYZlNLu6XD69cG6ERyWSdomy9YBYCmjir+8+n9+Vaufa3uwTZuquYTWZdk6AGxuqLAPCAy11OHja7SpTP6caHVZtg4AfzAV7uPw+S2tVnO3Q5sqLbJLtA9g0Kd/v5r5MTJo7awxQrAB0jQaarVZtg4g+rhLI0wkAjXR0fpZqy0zEZ4ZaF2WrQMwhZgqxjY3bTh3O8alEEC12gxbB2AcxrMaDWX0YVdG+3fl+P6lSbtuR60UJom9De13ZNk6ADg5PqI55pT8/q4elDAasG8wXXkI8wntO8/WAWDjUoswZ5R4KrQKoLbwuPcPtrX+i9gagNrCi6B0eNgKgNzwwV96xKiqH4bASweQFx4Tovo8cG9DLWlY1+fOD/rqsRePxrTvMl4qgKLhaTu46pVO89IAVAnfpJcCwNXwcOMAXA4PNwrA9fBwYwB8CA83AsCX8HDtAHwKD9cKwLfwcG0AfAwP1wLA1/BwZQB4bZUll8PDlQCkvZ2ZyvXwcCUAeGJLkw/h4UoA8ALDJF/Cw5UAwHiJ4Wt4uDIAGB9OYCXAhFjmnxRsuhYAPpsBMAAGwAAYAD3YJjMABsAAGAADoAfb5NYDOAMUADVNa8+GZwAAAABJRU5ErkJggg==">
 
-    <!-- Open Graph / Podgląd na Messengerze, Facebooku i WhatsAppie -->
+    <!-- Open Graph / Podgląd na Facebooku, Messengerze i WhatsAppie -->
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="pl_PL">
     <meta property="og:title" content="AutoSerwis Pro | Profesjonalna Mechanika Pojazdowa">
-    <meta property="og:description" content="Kompleksowa mechanika pojazdowa, diagnostyka komputerowa, serwis klimatyzacji i wymiana opon. Umów wizytę!">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=1200&h=630&q=80">
+    <meta property="og:description" content="Kompleksowa mechanika pojazdowa, szybka diagnostyka komputerowa, serwis klimatyzacji i opon. Sprawdź nas!">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&h=630&q=80">
+    <meta property="og:image:secure_url" content="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&h=630&q=80">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="AutoSerwis Pro | Profesjonalna Mechanika Pojazdowa">
-    <meta name="twitter:description" content="Kompleksowa mechanika pojazdowa, diagnostyka komputerowa i serwis.">
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=1200&h=630&q=80">
+    <meta name="twitter:description" content="Kompleksowa mechanika pojazdowa, szybka diagnostyka komputerowa i serwis.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&h=630&q=80">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons -->
